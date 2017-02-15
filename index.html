@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>GFS Lightbox - Zeku</title>
+        <!--   HTML5SHIV HTML para Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.-->
+        <!-- RESPOND media queries (Diseño Responsivo) para IE 6-8 y otros-->
+        <!-- Comentario con una directiva -->
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="ini()">
+        <div class="container">
+            <h2 class="text-center text-primary lead">Consulte el modelo americano GFS</h2>
+
+            <div id="mapa" class="row">
+                <div class="col-xs-6 col-md-3"><img class="img_gfs img-responsive img-thumbnail" id="target-6" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-6"></p></div>             
+                <div class="col-xs-6 col-md-3"><img class="img_gfs img-responsive img-thumbnail" id="target-12" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-12"></p></div>            
+                <div class="col-xs-6 col-md-3"><img class="img_gfs img-responsive img-thumbnail" id="target-18" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-18"></p></div>            
+                <div class="col-xs-6 col-md-3"><img class="img_gfs img-responsive img-thumbnail" id="target-24" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-24"></p></div>            
+            </div><!--FIN FILA MAPA-->
+        
+            <br>
+            
+            <div id="avance" class="row">
+                <div class="col-xs-6">
+                    <button class="btn btn-info" id="left_button" onclick="avance_galeria(this.id)"><b>&lt;</b></button>
+                </div>       
+                <div class="col-xs-6">
+                    <button class="btn btn-info" id="right_button" onclick="avance_galeria(this.id)"><b>&gt;</b></button>
+                </div>    
+            </div><!--FIN FILA AVANCE-->
+        </div>  <!--FIN CONTAINER-->
+        
+        <div id="overlay">
+            <h1 id="cerrar_overlay">&nbsp;X&nbsp;</h1>
+            <div id="overlay-list">
+                <div>
+                    <button class="btn btn-info boton-overlay" id="left_button_mapa" onclick="avance_mapa(this.id)"><b>&lt;</b></button>
+                </div>
+                <div>
+                    <img class="img-responsive img-thumbnail" id="img_mapa" src="#">
+                </div>
+                <div>
+                    <button class="btn btn-info boton-overlay" id="right_button_mapa" onclick="avance_mapa(this.id)"><b>&gt;</b></button>
+                </div>
+            </div>
+        </div><!--FIN OVERLAY-->
+
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+        
+    </body>
+
+</html>
