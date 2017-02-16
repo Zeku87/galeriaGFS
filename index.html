@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <title>GFS Lightbox - Zeku</title>
+        <title>GFS Model</title>
         <!--   HTML5SHIV HTML para Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.-->
         <!-- RESPOND media queries (Diseño Responsivo) para IE 6-8 y otros-->
         <!-- Comentario con una directiva -->
@@ -15,27 +15,37 @@
             <script src="js/respond.min.js"></script>
         <![endif]-->
     </head>
- <body onload="ini()">
+ <body>
         <div class="container">
             <h2 class="text-center text-primary lead">Modelo GFS España</h2>
 
             <div id="mapa" class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><img class="img_gfs img-responsive img-thumbnail" id="target-6" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-6"></p></div>             
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><img class="img_gfs img-responsive img-thumbnail" id="target-12" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-12"></p></div>            
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><img class="img_gfs img-responsive img-thumbnail" id="target-18" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-18"></p></div>            
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><img class="img_gfs img-responsive img-thumbnail" id="target-24" src="#" alt="hora" onclick="ampliar_imagen(this.src, this.alt)"><p class="img_footer text-center text-info" id="p-24"></p></div>            
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img class="img_gfs img-responsive img-thumbnail" id="target-6" src="#" alt="hora">
+                    <p class="img_footer text-center text-info" id="p-6"></p>
+                </div>             
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img class="img_gfs img-responsive img-thumbnail" id="target-12" src="#" alt="hora">
+                    <p class="img_footer text-center text-info" id="p-12"></p>
+                </div>            
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img class="img_gfs img-responsive img-thumbnail" id="target-18" src="#" alt="hora">
+                    <p class="img_footer text-center text-info" id="p-18"></p></div>            
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <img class="img_gfs img-responsive img-thumbnail" id="target-24" src="#" alt="hora">
+                    <p class="img_footer text-center text-info" id="p-24"></p></div>            
             </div><!--FIN FILA MAPA-->
         
             <br>
             
             <div id="avance" class="row">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									 <button class="btn btn-info" id="left_button" onclick="avance_galeria(this.id)">
+									 <button class="btn btn-info" id="left_button">
 										<b>&lt;</b>
 									 </button>
 							</div>
                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-									 <button class="btn btn-info" id="right_button" onclick="avance_galeria(this.id)">
+									 <button class="btn btn-info" id="right_button">
 										 <b>&gt;</b>
 									 </button>  
 							</div>
@@ -44,18 +54,21 @@
         </div>  <!--FIN CONTAINER-->
         
         <div id="overlay">
-            <h1 id="cerrar_overlay">&nbsp;X&nbsp;</h1>
+            <h1 id="cerrar_overlay">&nbsp&times;&nbsp;</h1>
             <div id="overlay-list">
                 <div>
-                    <button class="btn btn-info boton-overlay" id="left_button_mapa" onclick="avance_mapa(this.id)"><b>&lt;</b></button>
+                    <button class="btn btn-info boton-overlay" id="left_button_mapa"><b>&lt;</b></button>
                 </div>
                 <div>
                     <img class="img-responsive img-thumbnail" id="img_mapa" src="#">
                 </div>
                 <div>
-                    <button class="btn btn-info boton-overlay" id="right_button_mapa" onclick="avance_mapa(this.id)"><b>&gt;</b></button>
+                    <button class="btn btn-info boton-overlay" id="right_button_mapa"><b>&gt;</b></button>
                 </div>
             </div>
-        </div><!--FIN OVERLAY-->        
+        </div><!--FIN OVERLAY-->   
+     <script src="js/jquery-3.1.1.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/app.js"></script>
 </body>
 </html>
