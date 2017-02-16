@@ -22,17 +22,17 @@ function ini(){
 }    
     
 function avance_galeria(id){
-    var direccion = (id == "left_button") ? - 6 : 6;
+    var direccion = (id == "left_button") ? -24 : 24;
     
     hora = hora.map(function(current){return current + direccion;});    
     
-    if(hora[hora.length - 1] == 174){
-        direccion = -150;
+    if(hora[hora.length - 1] == 192){
+        direccion = -168;
         hora = hora.map(function(current){return current + direccion;});
     }
     
-    if(hora[0] == 0){
-        direccion = 150;
+    if(hora[0] == -18){
+        direccion = 168;
         hora = hora.map(function(current){return current + direccion;});
     }
     
